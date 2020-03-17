@@ -1,0 +1,26 @@
+server:
+  port: 8090  servlet:    context-path: /zh
+
+# 视图解析器    
+spring:  mvc:    view:      prefix: /
+      suffix: .jsp
+
+# 数据源        datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(6eV98vb489AcZDoCatJmJm4pZpgvQX0TkzzCtjc0ijE9Rt1k7nBuHCHKYMBAJoX0)
+    username: ENC(YtE2K/0F+cH3uHCQPJAr9w==)
+    password: ENC(X4DeBdC/keEukRpTbMWM+w==)
+
+# mybatis配置    
+mybatis:  type-aliases-package: com.cssl.pojo
+  configuration:
+    use-generated-keys: true    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ 
+# 分页配置    
+pagehelper:
+  reasonable: true 
+  
+# 密钥 
+jasypt:
+  encryptor:
+    password: EayzXkK2  
