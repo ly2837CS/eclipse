@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.dao.UsersDao">
+	
+	<insert id="insertUsers" keyColumn="id" keyProperty="id" parameterType="Users">
+		insert into users(username,password) values(#{username},#{password})
+	</insert>
+	
+	<select id="selectById" resultType="Users">
+		select * from users where id=#{id}
+	</select>
+	
+	<select id="selectPage" resultType="Users">
+		select * from users
+	</select>
+	
+</mapper>
